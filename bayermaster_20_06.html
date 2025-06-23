@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bayer - Parceria Premiada</title>
+    <style type="text/css">
+        /* Reset básico para e-mail */
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            width: 100% !important;
+        }
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        /* Estilos globais para imagens - CRUCIAIS para colagem e responsividade */
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            height: auto; /* Permite que a altura se ajuste proporcionalmente */
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            display: block;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 0;
+            margin: 0;
+            line-height: 0;
+            font-size: 0;
+        }
+
+        /* Estilos padrão para desktop (600px) */
+        .main-table {
+            width: 600px !important;
+            max-width: 600px !important;
+            margin: 0 auto;
+        }
+        .full-width-img {
+            width: 600px !important;
+            max-width: 600px !important;
+            height: auto !important;
+        }
+        /* Estilos para os botões da loja de aplicativos - Desktop */
+        .app-store-btn {
+            width: 116px; /* Largura fixa dos botões no desktop */
+            max-width: 116px;
+            height: 37px; /* Altura fixa dos botões no desktop */
+        }
+        /* Célula para imagens que precisam de alinhamento e esmagamento de espaço */
+        .image-cell {
+            padding: 0;
+            font-size: 0;
+            line-height: 0;
+            vertical-align: top;
+        }
+
+        /* ----- NOVOS ESTILOS PARA O CTA RECONSTRUÍDO EM HTML/CSS ----- */
+        .cta-section-bg {
+            background-color: #00AEEF; /* Fundo azul do CTA */
+            padding: 20px; /* Padding geral da seção */
+        }
+        .cta-text-column {
+            font-family: Arial, Helvetica, sans-serif;
+            padding-right: 15px; /* Espaço entre o texto e os botões no desktop */
+        }
+        .cta-title {
+            color: #000000; /* Preto para o título */
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 0 5px 0; /* Margem abaixo do título */
+            padding: 0;
+            line-height: 1.2;
+        }
+        .cta-description {
+            color: #000000; /* Preto para a descrição */
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .cta-buttons-column {
+            width: 130px; /* Largura para os botões no desktop */
+            text-align: right;
+            vertical-align: top; /* Alinha os botões ao topo da coluna */
+            padding-top: 10px; /* Ajuste para o alinhamento vertical dos botões */
+        }
+        .cta-button-cell {
+            padding-bottom: 20px; /* Aumentado o gap entre os botões no desktop para 20px */
+            padding-top: 0; /* Evita padding superior extra */
+            text-align: right; /* Alinha o botão à direita na célula */
+        }
+        .cta-button-cell:last-child {
+            padding-bottom: 0; /* Remove padding do último botão */
+        }
+
+        /* Media Query para telas menores (até 600px) */
+        @media screen and (max-width: 600px) {
+            .main-table {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .full-width-img {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+            td[style*="padding"] {
+                    padding-left: 15px !important;
+                    padding-right: 15px !important;
+            }
+
+            /* NOVO: Responsividade do CTA: Colunas lado a lado no mobile */
+            .cta-section-bg {
+                padding: 15px !important; /* Reduz padding geral no mobile */
+            }
+            .cta-text-column,
+            .cta-buttons-column {
+                width: 50% !important; /* Cada coluna tem 50% da largura */
+                display: inline-block !important; /* Colunas ficam lado a lado */
+                vertical-align: middle !important; /* Alinha verticalmente */
+                padding-right: 0 !important; /* Remove padding direito da coluna de texto */
+                padding-bottom: 0 !important; /* Remove padding inferior */
+                text-align: left !important; /* Alinha texto à esquerda */
+            }
+            .cta-buttons-column {
+                text-align: center !important; /* Centraliza os botões */
+                padding-top: 0 !important; /* Remove padding superior */
+            }
+            .cta-button-cell {
+                text-align: center !important; /* Centraliza os botões na célula */
+                padding-bottom: 25px !important; /* Aumenta o gap entre os botões no mobile para 25px */
+            }
+            .cta-button-cell:last-child {
+                padding-bottom: 0 !important; /* Remove padding do último botão */
+            }
+            .app-store-btn {
+                width: 90% !important; /* Ajusta largura para caber lado a lado e ser um pouco maior */
+                max-width: 125px !important; /* Limita o tamanho do botão para não quebrar o layout */
+                height: auto !important;
+                margin: 0 auto !important; /* Centraliza a imagem do botão */
+                display: inline-block !important; /* Garante que os botões se comportem corretamente */
+            }
+        }
+
+        /* Media Query para telas muito pequenas (até 360px) */
+        @media screen and (max-width: 360px) {
+            td[style*="padding"] {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+            .cta-title {
+                font-size: 18px !important;
+            }
+            .cta-description {
+                font-size: 14px !important;
+            }
+            .cta-text-column,
+            .cta-buttons-column {
+                width: 100% !important; /* Em telas muito pequenas, empilha novamente */
+                display: block !important;
+                text-align: center !important; /* Centraliza tudo */
+                padding-bottom: 15px !important;
+            }
+            .cta-text-column {
+                padding-bottom: 10px !important;
+            }
+            .cta-buttons-column {
+                padding-top: 5px !important;
+                padding-bottom: 0 !important;
+            }
+            .app-store-btn {
+                width: 70% !important;
+                max-width: 250px !important;
+                height: auto !important;
+            }
+        }
+    </style>
+</head>
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background-color: #ffffff;">
+
+    <table class="main-table" width="600" bgcolor="#ffffff" align="center" border="0" cellspacing="0" cellpadding="0"
+        style="border: none; margin: 0 auto; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 600px; max-width: 600px;">
+
+        <tr>
+            <td align="center" class="image-cell">
+                <img src="https://estevaonrs.github.io/bayer-parceria/cabecalho.svg" alt="Cabeçalho Bayer" class="full-width-img">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" class="image-cell">
+                <img src="https://estevaonrs.github.io/bayer-parceria/hero.svg" alt="Hero com texto de boas-vindas" class="full-width-img">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" class="image-cell">
+                <img src="https://estevaonrs.github.io/bayer-parceria/hero2.svg" alt="Hero 2 com imagem de celular" class="full-width-img">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="cta-section-bg">
+                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                    <tr>
+                        <td class="cta-text-column" width="65%" valign="top">
+                            <p class="cta-title">
+                                Baixe o app.
+                            </p>
+                            <p class="cta-description">
+                                Ative as notificações e ganhe a cada venda. Basta ficar atento às campanhas da safra 25/26, dar aceite e ganhar seu prêmio para ser resgatado no final de cada safra.
+                            </p>
+                        </td>
+                        <td class="cta-buttons-column" width="35%" valign="top">
+                            <table border="0" cellspacing="0" cellpadding="0" align="right">
+                                <tr>
+                                    <td class="cta-button-cell">
+                                        <a href="https://play.google.com/store/apps/details?id=sua_id_do_app_google_play" target="_blank">
+                                            <img src="https://estevaonrs.github.io/bayer-parceria/playstore.svg" alt="Baixar no Google Play" class="app-store-btn">
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="cta-button-cell">
+                                        <a href="https://apps.apple.com/us/app/sua_id_do_app_app_store" target="_blank">
+                                            <img src="https://estevaonrs.github.io/bayer-parceria/appstore.svg" alt="Baixar na App Store" class="app-store-btn">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="image-cell">
+                <img src="https://estevaonrs.github.io/bayer-parceria/banner.svg" alt="Banner Informativo" class="full-width-img">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" class="image-cell" style="background-color: #01354f;">
+                <img src="https://estevaonrs.github.io/bayer-parceria/footer.svg" alt="Rodapé Bayer" class="full-width-img">
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
